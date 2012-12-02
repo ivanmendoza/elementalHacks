@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>LA SAN BOX - EXPRESS</title>
+	<title>Dibuja un círculo con RaphaelJS</title>
 	<!-- LINKS  -->
 	<link rel="stylesheet" href="css/express.css">
 	<!-- IE8 'n older IEs  -->
@@ -16,29 +16,33 @@
 	<script type="text/javascript">
 	domready(function () {
 		
+		// Seleccionar el div contenedor y preparar el "lienzo" con RaphaelJS
 		var elDrawArea = document.getElementById("drawArea");
 		da = new Raphael(elDrawArea, 700, 500);
+		
+		// Dibujar las formas (Tierra y luna)
 		var tierra = da.circle(350, 250, 150);
 		tierra.attr({'fill': 'url(images/earth.jpg)'});
-
 		var luna = da.circle(190, 380, 40);
 		luna.attr({'fill': 'url(images/moon.jpg)', 'background-size':'100', 'id':'luna'});
-		luna.toBack();	
 
-		var t = 12e3;
+		// Definir las animaciones: movimientox (cx, cy), tiempo, easing
+		var t = 12e3; // 12000ms = 12 segundos
 		traslacion1 = Raphael.animation({cx: 530,cy: 120}, t/2, 'linear', deVuelta);
 		traslacion2 = Raphael.animation({cx: 190,cy: 380}, t/2, 'easeIn', deIda);
 
+		// Funciones utilizadas como callbacks de las animaciones para perpetuar el ciclo de traslación.
 		function deIda(){
-			luna.toBack();	
+			luna.toBack(); // se utiliza para enviar a la luna detrás de la tierra
 			luna.animate(traslacion1);
 		}
 
 		function deVuelta(){
-			luna.toFront();	
+			luna.toFront();	 // pasa la luna al frente de la tierra
 			luna.animate(traslacion2);
 		}
 		
+		// Inicia la animación de traslación
 		deIda();
 
 	});
