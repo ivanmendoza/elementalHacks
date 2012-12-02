@@ -1,0 +1,1323 @@
+/*!
+*
+* LASANBOX MOBILE FIRST
+* ivan <soporte@ivanmendoza.net>
+*
+*/
+/*
+	FONTS
+*/
+/*!
+*
+* RESETX
+* by @dic7 (github:ivanmendoza)
+* 
+* Based on Start Vanilla CSS 1.0.1 and CSS Normalize
+* Required: _snbx-font.less or similar. 
+*
+*/
+body {
+  font: normal 1em verdana, helvetica, arial, sans-serif;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+pre,
+code,
+tt {
+  font: normal 1/1.5 'Lucida Console', 'Consolas', 'Courier New', monospace;
+}
+b,
+strong {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: normal 2/.9 'Century Gothic', verdana, sans-serif;
+}
+em,
+i,
+dfn {
+  font-style: italic;
+}
+dfn {
+  font-weight: bold;
+}
+p,
+code,
+pre,
+kbd {
+  margin: 0 0 1.5em 0;
+}
+blockquote {
+  margin: 0 1.5em 1.5em 1.5em;
+  font-style: italic;
+}
+cite {
+  font-style: italic;
+}
+li ul,
+li ol {
+  margin: 0 1.5em;
+}
+ul,
+ol {
+  margin: 0 1.5em 1.5em 1.5em;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+ol ol {
+  list-style: upper-alpha;
+}
+ol ol ol {
+  list-style: lower-roman;
+}
+ol ol ol ol {
+  list-style: lower-alpha;
+}
+dl {
+  margin: 0 0 1.5em 0;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1.5em;
+}
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  text-align: left;
+}
+th,
+td,
+caption {
+  padding: 4px 10px 4px 5px;
+}
+tfoot {
+  font-style: italic;
+}
+sup,
+sub {
+  line-height: 0;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+}
+address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+del {
+  text-decoration: line-through;
+}
+pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+img.centered,
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.alignright {
+  display: inline;
+}
+img.alignleft {
+  display: inline;
+}
+.alignright {
+  float: right;
+  margin-left: 10px;
+}
+.alignleft {
+  float: left;
+  margin-right: 10px;
+}
+img {
+  max-width: 100%;
+}
+* html .clearfix {
+  height: 1%;
+}
+* + html .clearfix {
+  display: inline-block;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .group {
+  height: 1%;
+}
+* + html .group {
+  display: inline-block;
+}
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.input,
+textarea,
+button,
+label {
+  font: normal 1/1 tahoma, sans-serif;
+}
+/*
+	normalize.css
+	http://github.com/necolas/normalize.css
+*/
+/*
+	 * Corrects block display not defined in IE6/7/8/9 & FF3
+	 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/*
+	 * Corrects margin displayed oddly in IE6/7
+	 */
+form {
+  margin: 0;
+}
+/*
+	 * Define consistent border, margin, and padding
+	 */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+	 * 1. Corrects color not being inherited in IE6/7/8/9
+	 * 2. Corrects text not wrapping in FF3 
+	 * 3. Corrects alignment displayed oddly in IE6/7
+	 */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/*
+	 * 1. Corrects font size not being inherited in all browsers
+	 * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+	 * 3. Improves appearance and consistency in all browsers
+	 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+  outline: none;
+}
+/*
+	 * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+	 */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+
+}
+/*
+	 * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+	 * 2. Corrects inability to style clickable 'input' types in iOS
+	 * 3. Removes inner spacing in IE7 without affecting normal text inputs
+	 *    Known issue: inner spacing remains in IE6
+	 */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+
+  -webkit-appearance: button;
+  /* 2 */
+
+  *overflow: visible;
+  /* 3 */
+
+}
+/*
+	 * Re-set default cursor for disabled elements
+	 */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+	 * 1. Addresses box sizing set to content-box in IE8/9
+	 * 2. Removes excess padding in IE8/9
+	 * 3. Removes excess padding in IE7
+	      Known issue: excess padding remains in IE6
+	 */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/*
+	 * 1. Addresses appearance set to searchfield in S5, Chrome
+	 * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+	 */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+	 * Removes inner padding and search cancel button in S5, Chrome on OS X
+	 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/*
+	 * Removes inner padding and border in FF3+
+	 * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+	 */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+	 * 1. Removes default vertical scrollbar in IE6/7/8/9
+	 * 2. Improves readability and alignment in all browsers
+	 */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/*
+	MY DEFAULTS
+*/
+.leftAlign {
+  float: left;
+  clear: none;
+}
+.rightAlign {
+  float: right;
+  clear: none;
+}
+.centerAlign {
+  margin-left: auto;
+  margin-right: auto;
+}
+.textToLeft {
+  text-align: left;
+}
+.textToCenter {
+  text-align: center;
+}
+.textToRight {
+  text-align: right;
+}
+.areaForm {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/*!
+*
+* ELEMENTX
+* by @dic7 (github:ivanmendoza)
+* 
+* Based on LESS Elements 0.6 by Dmitry Fadeyev. http://lesselements.com
+*
+*/
+#borders .none {
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/*!
+*
+* CONTROLX
+* by @dic7 (github:ivanmendoza)
+* 
+*/
+#ui .input-text {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: solid 1px #aaa;
+  padding: .35em;
+  margin-right: .2em;
+  -webkit-appearance: none;
+  outline: none;
+}
+/*!
+*
+* GRIDX
+* by @dic7 (github:ivanmendoza)
+*
+* Based on Gridpak – gridpak.com
+* 
+*/
+.mixin-span_first {
+  margin-left: 0;
+}
+.display {
+  background: #eee;
+  position: relative;
+}
+.display:before {
+  content: " ";
+  border: dashed 1px rgba(0, 0, 0, 0.2);
+  border-width: 0 1px 1px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.display > * {
+  background: rgba(255, 255, 0, 0.7);
+}
+.display > * > * {
+  background: rgba(255, 210, 0, 0.7);
+}
+.columns.borderL {
+  border-left: solid 1px #ccc !important;
+}
+.columns.borderR {
+  border-right: solid 1px #ccc !important;
+}
+.borderT {
+  border-top: solid 2px rgba(0, 0, 0, 0.30000000000000004) !important;
+}
+.borderB {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.30000000000000004) !important;
+}
+/* ------ Moviles ------ */
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+.fixedContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+}
+.row {
+  margin-left: -4px;
+  overflow: hidden;
+  clear: both;
+}
+.one-mobile.column,
+.one-mobile.columns {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  width: 25%;
+  border-left-width: 4px;
+  padding: 0;
+  margin-left: 0;
+  position: relative;
+}
+.two-mobile.columns {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  width: 50%;
+  border-left-width: 4px;
+  padding: 0;
+  margin-left: 0;
+  position: relative;
+}
+.three-mobile.columns {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  width: 75%;
+  border-left-width: 4px;
+  padding: 0;
+  margin-left: 0;
+  position: relative;
+}
+.four-mobile.columns {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  width: 100%;
+  border-left-width: 0;
+  padding: 0;
+  margin-left: 0;
+  position: relative;
+}
+.all.columns {
+  margin-left: 0;
+  width: 100%;
+}
+/* ------ Tablets ------ */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 1000px;
+  }
+  .fixedContainer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .row {
+    margin-left: -8px;
+  }
+  .one.column,
+  .one.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 8.333333333333334%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .two.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 16.666666666666668%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .three.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 25%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .four.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 33.333333333333336%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .five.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 41.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .six.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 50%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .seven.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 58.333333333333336%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .eight.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 66.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .nine.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 75%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .ten.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 83.33333333333334%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .eleven.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 91.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .twelve.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 100%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .all.columns {
+    margin-left: 0;
+    width: 100%;
+  }
+  .offset-by-one {
+    margin-left: 8.333333333333334% !important;
+  }
+  .offset-by-two {
+    margin-left: 16.666666666666668% !important;
+  }
+  .offset-by-three {
+    margin-left: 25% !important;
+  }
+  .offset-by-four {
+    margin-left: 33.333333333333336% !important;
+  }
+  .offset-by-five {
+    margin-left: 41.66666666666667% !important;
+  }
+  .offset-by-six {
+    margin-left: 50% !important;
+  }
+  .offset-by-seven {
+    margin-left: 58.333333333333336% !important;
+  }
+  .offset-by-eight {
+    margin-left: 66.66666666666667% !important;
+  }
+  .offset-by-nine {
+    margin-left: 75% !important;
+  }
+  .offset-by-ten {
+    margin-left: 83.33333333333334% !important;
+  }
+  .offset-by-eleven {
+    margin-left: 91.66666666666667% !important;
+  }
+  .offset-by-twelve {
+    margin-left: 100% !important;
+  }
+  .pull-one {
+    right: 8.333333333333334%;
+  }
+  .pull-two {
+    right: 16.666666666666668%;
+  }
+  .pull-three {
+    right: 25%;
+  }
+  .pull-four {
+    right: 33.333333333333336%;
+  }
+  .pull-five {
+    right: 41.66666666666667%;
+  }
+  .pull-six {
+    right: 50%;
+  }
+  .pull-seven {
+    right: 58.333333333333336%;
+  }
+  .pull-eight {
+    right: 66.66666666666667%;
+  }
+  .pull-nine {
+    right: 75%;
+  }
+  .pull-ten {
+    right: 83.33333333333334%;
+  }
+  .pull-eleven {
+    right: 91.66666666666667%;
+  }
+  .pull-twelve {
+    right: 100%;
+  }
+  .push-one {
+    left: 8.333333333333334%;
+  }
+  .push-two {
+    left: 16.666666666666668%;
+  }
+  .push-three {
+    left: 25%;
+  }
+  .push-four {
+    left: 33.333333333333336%;
+  }
+  .push-five {
+    left: 41.66666666666667%;
+  }
+  .push-six {
+    left: 50%;
+  }
+  .push-seven {
+    left: 58.333333333333336%;
+  }
+  .push-eight {
+    left: 66.66666666666667%;
+  }
+  .push-nine {
+    left: 75%;
+  }
+  .push-ten {
+    left: 83.33333333333334%;
+  }
+  .push-eleven {
+    left: 91.66666666666667%;
+  }
+  .push-twelve {
+    left: 100%;
+  }
+}
+/* ------ Desktop ------ */
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 100%;
+    max-width: 1260px;
+  }
+  .fixedContainer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1260px;
+  }
+  .row {
+    margin-left: -8px;
+  }
+  .one.column,
+  .one.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 8.333333333333334%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .two.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 16.666666666666668%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .three.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 25%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .four.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 33.333333333333336%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .five.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 41.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .six.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 50%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .seven.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 58.333333333333336%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .eight.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 66.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .nine.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 75%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .ten.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 83.33333333333334%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .eleven.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 91.66666666666667%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .twelve.columns {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 100%;
+    border-left-width: 8px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .all.columns {
+    margin-left: 0;
+    width: 100%;
+  }
+  .offset-by-one {
+    margin-left: 8.333333333333334% !important;
+  }
+  .offset-by-two {
+    margin-left: 16.666666666666668% !important;
+  }
+  .offset-by-three {
+    margin-left: 25% !important;
+  }
+  .offset-by-four {
+    margin-left: 33.333333333333336% !important;
+  }
+  .offset-by-five {
+    margin-left: 41.66666666666667% !important;
+  }
+  .offset-by-six {
+    margin-left: 50% !important;
+  }
+  .offset-by-seven {
+    margin-left: 58.333333333333336% !important;
+  }
+  .offset-by-eight {
+    margin-left: 66.66666666666667% !important;
+  }
+  .offset-by-nine {
+    margin-left: 75% !important;
+  }
+  .offset-by-ten {
+    margin-left: 83.33333333333334% !important;
+  }
+  .offset-by-eleven {
+    margin-left: 91.66666666666667% !important;
+  }
+  .offset-by-twelve {
+    margin-left: 100% !important;
+  }
+  .pull-one {
+    right: 8.333333333333334%;
+  }
+  .pull-two {
+    right: 16.666666666666668%;
+  }
+  .pull-three {
+    right: 25%;
+  }
+  .pull-four {
+    right: 33.333333333333336%;
+  }
+  .pull-five {
+    right: 41.66666666666667%;
+  }
+  .pull-six {
+    right: 50%;
+  }
+  .pull-seven {
+    right: 58.333333333333336%;
+  }
+  .pull-eight {
+    right: 66.66666666666667%;
+  }
+  .pull-nine {
+    right: 75%;
+  }
+  .pull-ten {
+    right: 83.33333333333334%;
+  }
+  .pull-eleven {
+    right: 91.66666666666667%;
+  }
+  .pull-twelve {
+    right: 100%;
+  }
+  .push-one {
+    left: 8.333333333333334%;
+  }
+  .push-two {
+    left: 16.666666666666668%;
+  }
+  .push-three {
+    left: 25%;
+  }
+  .push-four {
+    left: 33.333333333333336%;
+  }
+  .push-five {
+    left: 41.66666666666667%;
+  }
+  .push-six {
+    left: 50%;
+  }
+  .push-seven {
+    left: 58.333333333333336%;
+  }
+  .push-eight {
+    left: 66.66666666666667%;
+  }
+  .push-nine {
+    left: 75%;
+  }
+  .push-ten {
+    left: 83.33333333333334%;
+  }
+  .push-eleven {
+    left: 91.66666666666667%;
+  }
+  .push-twelve {
+    left: 100%;
+  }
+}
+.container {
+  margin: 0 auto;
+}
+.row {
+  margin-bottom: 1em;
+}
+header {
+  padding: 2em 1em;
+  margin: 0;
+  background: #f27b35;
+  color: #ffffff;
+  -webkit-box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.09999999999999998);
+  -moz-box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.09999999999999998);
+  box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.09999999999999998);
+}
+header .title {
+  font-size: 2.218em;
+  line-height: 1;
+  margin-top: .5em;
+  margin-bottom: .1em;
+  text-shadow: 2px -2px #d06f32;
+  text-transform: uppercase;
+}
+header .tagline {
+  margin: 0;
+}
+header .tagline a {
+  text-decoration: none;
+  font-size: .85em;
+  color: #d06f32;
+  background: #ffffff;
+  padding: .1em .4em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+header .tagline a:hover {
+  -webkit-box-shadow: 0 0 10px #ffffff;
+  -moz-box-shadow: 0 0 10px #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}
+.areaSidebar {
+  margin: -2em 0 0;
+}
+.sidebar {
+  background: #832414;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6d1e11), color-stop(1, #992a17));
+  background: -moz-linear-gradient(center bottom, #6d1e11 0%, #992a17 100%);
+  background: -ms-linear-gradient(bottom, #6d1e11 0%, #992a17 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#992a17', endColorstr='#6d1e11',GradientType=0);
+  color: #ffffff;
+  -webkit-box-shadow: inset -5px 0 50px rgba(136, 136, 136, 0.19999999999999996);
+  -moz-box-shadow: inset -5px 0 50px rgba(136, 136, 136, 0.19999999999999996);
+  box-shadow: inset -5px 0 50px rgba(136, 136, 136, 0.19999999999999996);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.sidebar .widget {
+  margin: 0 1em 1em;
+  padding: 1em 0;
+}
+.sidebar .widget:first-child {
+  margin-top: 1em;
+}
+.sidebar .widget.areaToc .toc a {
+  color: #ffffff;
+  border-color: #af301b;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.sidebar .widget.areaToc .toc a:hover {
+  color: #000000;
+  background: #f2a649;
+}
+.tags {
+  text-align: right;
+  font-size: .8em;
+  margin: 0;
+}
+.tags li {
+  display: inline-block;
+}
+.tags li a {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.19999999999999996);
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.19999999999999996);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.19999999999999996);
+  padding: .4em .6em;
+  margin: .1em .1em .1em .2em;
+  text-decoration: none;
+  color: #071289;
+  background: #ffffff;
+}
+.tags li a:hover {
+  color: #ffffff;
+  background: #071289;
+}
+.toc {
+  list-style: none;
+  font-size: .8em;
+  margin: 1em 0 1em .4em;
+  padding: 0;
+}
+.toc li {
+  margin: 0;
+  padding: 0;
+}
+.toc li a {
+  display: block;
+  text-decoration: none;
+  color: #832414;
+  margin: 0;
+  padding: .6em 0 .5em .5em;
+  border-bottom: solid 1px #cccccc;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.toc li a:hover {
+  color: #ff0000;
+  background: #ffeebc;
+  padding-left: 1em;
+}
+.toc li.active {
+  font-weight: bold;
+}
+.toc li > ul {
+  margin: 0;
+  list-style: none;
+}
+.toc li > ul > li > a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.content .hentry {
+  margin-right: 2em;
+}

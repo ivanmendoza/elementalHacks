@@ -1,0 +1,1 @@
+function scrollTo(a){var b=a.offset().top;$("html,body").animate({scrollTop:b},1e3);return!1}function track(a,b,c){if(typeof _gaq=="undefined")return!1;_gaq.push(["_trackEvent",a,b,c])}jQuery.fn.exists=function(){return jQuery(this).length};var isIE=!1;if(navigator.appName=="Microsoft Internet Explorer")var isIE=!0;jQuery(function(){});

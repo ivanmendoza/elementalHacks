@@ -1,0 +1,173 @@
+/*!
+*
+* LASANBOX MOBILE FIRST
+* ivan <soporte@ivanmendoza.net>
+*
+*/
+
+//
+// SWATCHES
+//
+	@light:				#fff;
+	@soft_light:		#fefefe;
+	@dark:				#000;
+	@soft_dark:			#333;
+	@gray:				#888;
+	@light_gray:		#ccc;
+	@dark_gray:			#555;
+
+	//MuerteMXMuted
+	@yellow_light:		#FFEEBC;
+	@yellow_pineapple:	#EEC759;
+	@dark_green:		#565014;
+	@dark_orange:		#D06F32;
+	@red:				#f00;
+	@dark_red:			#832414;
+
+	//MuerteMXBright
+	@bright_yellow:		#F2BB13;
+	@peach_yellow:		#F2A649;
+	@orange:			#F27B35;
+	@dark_brown:		#261714;
+
+
+@cBg: 					@light; //Background
+@cBgContainer: 			@light; //Background content
+@cFg: 					@dark; //Text
+@ui_cta_text:			#071289;
+@ui_cta_bg:				#fff;
+@ui_cta_text_hover:		@ui_cta_bg;
+@ui_cta_bg_hover:		@ui_cta_text;
+@ui_toc_cta:			@dark_red;
+@ui_toc_cta_hover:		@red;
+@ui_toc_bg:				@light;
+@ui_toc_bg_hover:		@yellow_light;
+
+//
+// GENERAL
+//
+@dirImages: "../images";
+@defaulPageMargin:1em;
+
+//
+// IMPORTS
+//
+@import "fonts.less";
+@import "_snbx-reset.less";
+@import "_snbx-elementx.less";
+@import "_snbx-controlx.less";
+
+//
+// LAYOUTS
+//
+@import "_snbx-grid.less";
+.container{
+	margin:0 auto;
+}
+.row{
+	margin-bottom:1em;
+}
+
+header{
+	padding:2em 1em;
+	margin: 0;
+	background:@orange;
+	color:@light;
+	#shadows .inner(0, -10px, 30px, .1);
+	.title{
+		font-size:2.218em;
+		line-height:1;
+		margin-top:.5em;
+		margin-bottom:.1em;
+		text-shadow:2px -2px @dark_orange;
+		text-transform:uppercase;
+	}
+	.tagline{
+		margin:0;
+		a{
+			text-decoration:none;
+			font-size:.85em;
+			color:@dark_orange;
+			background:@light;
+			padding:.1em .4em;
+			#borders .rounded(.3em);
+			&:hover{
+				#shadows .drop(0, 0, 10px, 1, @light);
+			}
+		}
+	}
+}
+.areaSidebar{
+	margin:-2em 0 0;
+}
+.sidebar{
+	#gradients .v(@dark_red);
+	color:@light;
+	#shadows .inner(-5px, 0, 50px, .2, @gray);
+	#borders .rounded(5px);
+	.widget{
+		margin:0 1em 1em;
+		padding:1em 0;
+		&:first-child{
+			margin-top:1em;
+		}
+		&.areaToc{
+			.toc{
+
+				a{
+					color:@light;
+					border-color:lighten(@dark_red, 10%);
+					#borders .rounded(3px);
+					&:hover{
+						color:@dark;
+						background:@peach_yellow;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tags{
+	#ui .tags(@ui_cta_text, @ui_cta_bg, right);
+}
+
+.toc{
+	list-style:none;
+	font-size:.8em;
+	margin:1em 0 1em .4em;
+	padding:0;
+	li{
+		margin:0;
+		padding:0;
+		a{
+			display:block;
+			text-decoration:none;
+			color:@ui_toc_cta;
+			margin:0;
+			padding:.6em 0 .5em .5em;
+			border-bottom:solid 1px @light_gray;
+			#transition .all(1s);
+			&:hover{
+				color:@ui_toc_cta_hover;
+				background:@ui_toc_bg_hover;
+				padding-left:1em;
+			}
+		}
+		&.active{
+			font-weight:bold;
+		}
+		&>ul{
+			margin:0;
+			list-style:none;
+			&>li{
+				&>a{
+					color:fadeout(@light, 50%);
+				}
+			}
+		}
+	}
+}
+.content .hentry{
+	margin-right:2em;
+}
